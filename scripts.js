@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var textToType = "Jesús Daniel Nava Alcázar";
 
     // Configura el texto a escribir
-    typedText.textContent = 'Jesús Daniel Nava Alcázar';
+    typedText.textContent = '.';
     var index = 0;
 
     // Inicia la animación de escritura
