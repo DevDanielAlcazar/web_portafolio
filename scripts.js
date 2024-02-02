@@ -31,3 +31,24 @@ $(document).ready(function () {
         return false;
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var typedText = document.getElementById('typed-text');
+    var textToType = "Jesús Daniel Nava Alcázar";
+
+    // Configura el texto a escribir
+    typedText.textContent = 'Jesús Daniel Nava Alcázar';
+    var index = 0;
+
+    // Inicia la animación de escritura
+    function type() {
+        if (index < textToType.length) {
+            typedText.textContent += textToType.charAt(index);
+            index++;
+            setTimeout(type, 100);
+        }
+    }
+
+    // Llama a la función type para iniciar la animación
+    type();
+});

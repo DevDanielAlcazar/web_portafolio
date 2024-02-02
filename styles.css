@@ -44,6 +44,33 @@ body {
     height: 45%; /* Ajusta el tamaño de acuerdo a tus preferencias */
 }
 
+#typed-text {
+    overflow: hidden;
+    border-right: 2px solid white; /* Línea del "cursor" */
+    white-space: nowrap; /* Evita el salto de línea */
+    margin: 0;
+    display: inline-block;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+}
+
 #main-menu {
     flex: 0 0 15%;
     background-color: #623f8f96; /* Color de fondo del menú */
