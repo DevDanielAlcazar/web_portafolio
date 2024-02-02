@@ -227,28 +227,60 @@ body {
     font-family: Arial;
     text-align: center;
     margin-top: 5%;
+    background: linear-gradient(to bottom right, #800080d5, #4c0082cc); /* Fondo degradado morado */
+    padding: 20px; /* Agregamos un poco de espacio alrededor del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Texto blanco para mayor contraste */
 }
 
 #contact-form-container {
     display: flex;
-    margin-top: 2%;
-    text-align: left;
-    margin: 5%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en dispositivos más pequeños */
     justify-content: space-around;
 }
 
 #contact-form-container label {
-    margin-right: 2%;
-    padding: 1%;
-    font-family: Arial;
+    flex: 0 0 100%; /* Ocupa el 100% del ancho en dispositivos más pequeños */
+    margin-bottom: 5px; /* Añade un poco de espacio entre etiquetas y campos */
+}
+
+#contact-form-container input,
+#contact-form-container textarea {
+    flex: 1; /* Toma el espacio restante en dispositivos más pequeños */
+    margin-bottom: 10px; /* Añade un poco de espacio entre campos */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 
 #contact-form-container button {
-    padding: 2%;
-    margin-top: 2%;
+    flex: 1; /* Ocupa el 100% del ancho en dispositivos más pequeños */
+    padding: 10px;
+    margin-top: 10px; /* Añade un poco de espacio arriba del botón */
     font-family: Arial;
     font-weight: bold;
+    cursor: pointer;
+    background-color: #fff; /* Fondo blanco para mayor contraste con el texto */
+    color: #800080; /* Color morado para el texto del botón */
+    border: none;
+    border-radius: 5px;
 }
+
+/* Estilos adicionales para hacer el texto de ejemplo más claro */
+#contact-form-container input::placeholder,
+#contact-form-container textarea::placeholder {
+    color: #ccc; /* Color de texto gris claro */
+    font-style: italic; /* Texto en cursiva */
+}
+
+/* Estilos adicionales para hacer el formulario más atractivo en dispositivos más pequeños */
+@media only screen and (max-width: 600px) {
+    #contact-form-container {
+        flex-direction: column; /* Cambia la dirección en dispositivos más pequeños */
+    }
+}
+
 
 
 
